@@ -4,13 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Currency;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
 import javax.validation.constraints.Positive;
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -39,7 +38,7 @@ public class BeerDto {
 
     @NotNull
     @Positive
-    private BigInteger price;
+    private BigDecimal price;
 
     private Integer quantityOnHand;
 
